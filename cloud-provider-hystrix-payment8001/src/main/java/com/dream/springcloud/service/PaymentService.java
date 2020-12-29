@@ -39,7 +39,7 @@ public class PaymentService {
     }
 
     public String paymentInfo_TimeOutHandler(Integer id) {
-        return "线程池："+Thread.currentThread().getName()+"8001 系统繁忙或运行异常，请稍候重试, id: "+id+"\t"+"哈哈！(ㄒoㄒ)/~~";
+        return "线程池："+Thread.currentThread().getName()+" 8001 系统繁忙或运行异常，请稍候重试, id: "+id+"\t"+"哈哈！(ㄒoㄒ)/~~";
     }
 
     //====服务熔断

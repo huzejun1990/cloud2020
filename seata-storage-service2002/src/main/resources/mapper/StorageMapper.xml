@@ -9,7 +9,8 @@
     <result column="product_id" property="productId" jdbcType="INTEGER"/>
     <result column="total" property="total" jdbcType="INTEGER"/>
     <result column="used" property="used" jdbcType="INTEGER"/>
-    <result column="residue" property="reside" jdbcType="INTEGER"/>
+<!--    <result column="residue" property="reside" jdbcType="INTEGER"/>-->
+    <result column="residue" property="residue" jdbcType="INTEGER"/>
   </resultMap>
 
   <update id="decrease">

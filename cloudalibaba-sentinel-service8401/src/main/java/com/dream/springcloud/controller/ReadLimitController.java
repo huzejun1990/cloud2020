@@ -26,7 +26,7 @@ public class ReadLimitController {
         return new CommonResult(444,exception.getClass().getCanonicalName() + "\t服务不可用");
     }
 
-    @GetMapping("/byUrl")
+    @GetMapping("/rateLimit/byUrl")
     @SentinelResource(value = "byUrl")
     public CommonResult byUrl() {
         return new CommonResult(200, "按url限流测试ok", new Payment(2020L, "serial002"));

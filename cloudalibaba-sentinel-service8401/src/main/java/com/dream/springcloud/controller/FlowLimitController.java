@@ -21,6 +21,11 @@ public class FlowLimitController {
 
     @GetMapping("/testA")
     public String testA() {
+/*        try {
+            TimeUnit.MILLISECONDS.sleep(800);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }*/
         return "----testA";
     }
 

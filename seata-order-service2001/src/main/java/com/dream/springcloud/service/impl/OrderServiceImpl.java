@@ -14,6 +14,10 @@ import javax.annotation.Resource;
 /**
  * Created by huzejun
  * on 2020/6/1 22:16
+ *
+ * 创建订单->调用库存服务扣减库存->调用账户服务扣减余额->修改订单状态
+ * 简单说：
+ * 下订单->减库存->减余额->改状态
  */
 @Service
 @Slf4j
@@ -34,7 +38,7 @@ public class OrderServiceImpl implements OrderService {
      */
 
     @Override
-    @GlobalTransactional
+    @GlobalTransactional(name="fsp-create-order",rollbackFor = Exception.class)
     public void create(Order order) {
 
         //1.新建订单

@@ -20,5 +20,6 @@ public interface AccountService {
      * @param money
      * @return
      */
-    @PostMapping(value = "account/decrease")
-    CommonResult decrease(@RequestParam("userId") Long userId, @RequestParam("money") BigDecimal money);}
+    @PostMapping(value = "/account/decrease")
+    CommonResult decrease(@RequestParam("userId") Long userId, @RequestParam("money") BigDecimal money);
+}

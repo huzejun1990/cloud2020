@@ -23,7 +23,7 @@ spring:
 
           predicates:
             - Path=/payment/lb/** #断言,路径相匹配的进行路由
-#            - After=2020-05-25T15:03:31.560+08:00[Asia/Shanghai]
+#            - After=2021-12-30T16:47:48.209+08:00[Asia/Shanghai]
 #            - Cookie=username,zzyy
 #            - Header=X-Request-Id,\d+ #请求头要有 X-Request-Id属性并且值为整数的正则表达式
 

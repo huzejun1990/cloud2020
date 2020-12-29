@@ -5,6 +5,7 @@ import com.dream.springcloud.entities.Payment;
 import com.dream.springcloud.service.PaymentService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -23,8 +24,8 @@ public class PaymentController {
     @Value("${server.port}")
     private String serverPort;
 
-/*    @Resource
-    private DiscoveryClient discoveryClient;*/
+    @Resource
+    private DiscoveryClient discoveryClient;
 
     @PostMapping(value = "/payment/create")
     public CommonResult create(@RequestBody Payment payment){
